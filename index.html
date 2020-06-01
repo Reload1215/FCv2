@@ -27,13 +27,16 @@
     })
 
        // odometer.update(10864);
-    subsOdometer.innerHTML = 10684;
-    setTimeout(3000);
-    subsOdometer.innerHTML = 10685;
-    setTimeout(3000);
-    subsOdometer.innerHTML = 10684;
-    setTimeout(3000);
-    subsOdometer.innerHTML = 10686;
+    const options = {
+  startVal: 105023000,
+  duration: 500000,
+};
+let demo = new CountUp('myTargetElement', 105122000, options);
+if (!demo.error) {
+  demo.start();
+} else {
+  console.error(demo.error);
+}
   </script>
 
 
